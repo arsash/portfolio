@@ -1,15 +1,46 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Портфолио | Аршалуйс Асланян
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.home
+          .header
+            .logo 
+              a.logo(href="/") AA
+            nav.nav
+              ul.nav__list
+                li.nav__item 
+                  a.nav__link(href="/") Главная
+                li.nav__item 
+                  a.nav__link(href="#about") Обо мне
+                li.nav__item
+                  a.nav__link(href="#skills") Навыки
+                li.nav__item
+                  a.nav__link(href="#portfolio") Работы
+                li.nav__item
+                  a.nav__link(href="#reviews") Отзывы
+                li.nav__item
+                  a.nav__link(href="#contacts") Связатся
+            .socials
+              ul.socials__list
+                li.socials__items
+                  a.socials__link(href="#")
+                    +icon('insta', 'socials__icon')
+                li.socials__items
+                  a.socials__link(href="#")
+                    +icon('vk', 'socials__icon')
+                li.socials__items
+                  a.socials__link(href="https://github.com/arsash" target="_blank")
+                    +icon('github', 'socials__icon')
+          .name
+            p.name__description Личный сайт веб разработчика
+            h1.name__text Аршалуйс Асланян
+        section.about
+          h1 hi          
