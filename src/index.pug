@@ -11,36 +11,107 @@ html(lang="ru")
     .wrapper
       .maincontent
         section.home
-          .header
-            .logo 
-              a.logo(href="/") AA
-            nav.nav
-              ul.nav__list
-                li.nav__item 
-                  a.nav__link(href="/") Главная
-                li.nav__item 
-                  a.nav__link(href="#about") Обо мне
-                li.nav__item
-                  a.nav__link(href="#skills") Навыки
-                li.nav__item
-                  a.nav__link(href="#portfolio") Работы
-                li.nav__item
-                  a.nav__link(href="#reviews") Отзывы
-                li.nav__item
-                  a.nav__link(href="#contacts") Связатся
-            .socials
-              ul.socials__list
-                li.socials__items
-                  a.socials__link(href="#")
-                    +icon('insta', 'socials__icon')
-                li.socials__items
-                  a.socials__link(href="#")
-                    +icon('vk', 'socials__icon')
-                li.socials__items
-                  a.socials__link(href="https://github.com/arsash" target="_blank")
-                    +icon('github', 'socials__icon')
-          .name
-            p.name__description Личный сайт веб разработчика
-            h1.name__text Аршалуйс Асланян
-        section.about
-          h1 hi          
+            .header
+              .logo 
+                a.logo(href="/") AA
+              nav.nav
+                ul.nav__list
+                  li.nav__item 
+                    a.nav__link(href="/") Главная
+                  li.nav__item 
+                    a.nav__link(href="#about") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#skills") Навыки
+                  li.nav__item
+                    a.nav__link(href="#portfolio") Работы
+                  li.nav__item
+                    a.nav__link(href="#reviews") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#contacts") Связатся
+              .socials
+                ul.socials__list
+                  li.socials__items
+                    a.socials__link(href="https://www.facebook.com/ashot1980" target="_blank")
+                      +icon('fb', 'socials__icon')
+                  li.socials__items
+                    a.socials__link(href="https://www.linkedin.com/in/arshaluys/" target="_blank")
+                      +icon('lkdin', 'socials__icon')
+                  li.socials__items
+                    a.socials__link(href="https://github.com/arsash" target="_blank")
+                      +icon('github', 'socials__icon')
+            .name
+              p.name__description Личный сайт веб разработчика
+              h1.name__text Аршалуйс Асланян
+            .scroll
+              span.scroll__text Скролл
+              a.scroll__link(href="#about")
+                +icon('scroll', 'scroll__icon')
+            .about#about
+              .about__left
+                .about__pic
+                  +image('content/Ashot.jpg', 'about__image')
+                .details
+                  ul.details__list
+                    li.details__items Проживаю
+                    li.details__items Возраст
+                    li.details__items Родился
+                  ul.details__list
+                    li.details__items.details__items-white Москва
+                    li.details__items.details__items-white 39
+                    li.details__items.details__items-white 8 сентября 1980
+              .about__right
+                p.about__text Привет, меня зовут
+                h1.about__header Аршалуйс Асланян
+                p.about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.about__text.about__text-margin Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        section.skills#skills
+          h1.skills__header Чем я могу быть полезен Вам
+          p.skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .skills__details
+            .frontend
+              h2.frontend__header Front-end
+                - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
+              ul.frontend__list
+                each skill in skills
+                  li.frontend__list_item
+                    .title #{skill.title}
+                    svg(width="140"  height="140").circle
+                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
+                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
+                      defs
+                        linearGradient(id='grad')
+                          stop(offset="0%" stop-color="#dc9322")
+                          stop(offset="100%" stop-color="#d6831f")
+            .workflow
+              h2.workflow__header Workflow
+                - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
+              ul.frontend__list
+                each skill in skills
+                  li.frontend__list_item
+                    .title #{skill.title}
+                    svg(width="140"  height="140").circle
+                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
+                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
+                      defs
+                        linearGradient(id='grad')
+                    
+                          stop(offset="0%" stop-color="#dc9322")
+                          stop(offset="100%" stop-color="#d6831f")
+        section#portfolio
+          h1.portfolio__header Мои работы
+          .portfolio__details
+            .portfolio__images
+              +image('content/1.jpg', 'portfolio__image')
+              +image('content/2.jpg', 'portfolio__image')
+              +image('content/3.jpg', 'portfolio__image')
+              +image('content/4.jpg', 'portfolio__image')
+              +image('content/5.jpg', 'portfolio__image')
+              .portfolio__images-thumb
+                .thumb__container
+                  +image('content/1.jpg', 'portfolio__image portfolio__image--active')
+                  +image('content/2.jpg', 'portfolio__image')
+                  +image('content/3.jpg', 'portfolio__image')
+                  +image('content/4.jpg', 'portfolio__image')
+                  +image('content/5.jpg', 'portfolio__image')
+            .portfolio__number 1
+            .portfolio__text
