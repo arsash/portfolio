@@ -113,6 +113,13 @@ html(lang="ru")
                   +image('content/3.jpg', 'portfolio__image thumb')
                   +image('content/4.jpg', 'portfolio__image thumb')
                   +image('content/5.jpg', 'portfolio__image thumb')
+            .arrows
+              .arrows__cntrls
+                a.arrow__link(href="#")
+                  +icon('arrow-down', 'arrow__icon arrow__icon--activ')
+              .arrows__cntrls
+                a.arrow__link(href="#")
+                  +icon('arrow-down', 'arrow__icon arrow__icon--left')
             .portfolio__number 1
             .portfolio__text
               span.tags HTML

@@ -7,6 +7,7 @@
 .portfolio__details {
     display: flex;
     margin-bottom: 100px;
+    position: relative;
 }
 
 .portfolio__images {
@@ -60,6 +61,45 @@
 
     &:hover {
         border: 3px solid #dc9322;
+    }
+}
+
+.arrows {
+    width: 50px;
+    height: 96px;
+    background-color: #353e4e;
+    position: absolute;
+    bottom: 60px;
+    left: 56.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows__cntrls {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow__icon {
+    width: 10px;
+    height: 13px;
+    fill: #727883;
+
+    &--activ {
+        fill: #fff;
+    }
+
+    &--left {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        fill: #fff;
     }
 }
 
