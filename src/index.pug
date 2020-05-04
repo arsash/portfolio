@@ -130,4 +130,43 @@ html(lang="ru")
               .site
                 +icon('link', 'site-icon')
                 a.site-link(href="#" target="__blank") Посмотреть сайт
-        section.review-contacts
+        section.review
+          h1.review__heaeder#reviews Что обо мне говорят
+          .reviews
+            ul.reviews__list
+              li.reviews__item
+                .reviews-block
+                  +icon('quote', 'quote')
+                  p.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__person
+                  .reviews__person-image
+                    +image('content/Dima.jpg', 'reviews__person-pic')
+                  .reviews__person-text
+                    p.reviews__person-name Дмитрий Ковальчук
+                    p.reviews__person-pos Основатель Loftschool
+              li.reviews__item
+                .reviews-block
+                  +icon('quote', 'quote')
+                  p.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                .reviews__person
+                  .reviews__person-image
+                    +image('content/Vladimir.jpg', 'reviews__person-pic')
+                  .reviews__person-text
+                    p.reviews__person-name Владимир Сабанцев
+                    p.reviews__person-pos Преподаваталь
+          h1.review__heaeder#contacts Связатся со мной
+          .form
+            form#form(action="#")
+              .form__row.inputs
+                label.form__label Введите Ваше имя
+                  input.input__name(type="text" placeholder="Аршалуйс Асланян")
+                  +icon('user', 'input__icon')
+                label.form__label.email Введите Ваш E.mail
+                  input(type="email", name="" placeholder="a.aslanyan@inbox.ru")
+                  +icon('envelope', 'input__icon')
+              .form__row
+                label.form__label Сообщение к письму
+                  textarea(name="", rows="2" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса").textarea
+                  +icon('message', 'input__icon')
+              .form__row.form__btn
+                button(type="submit").btn Отправить
