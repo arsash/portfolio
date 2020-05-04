@@ -11,9 +11,10 @@ html(lang="ru")
     .wrapper
       .maincontent
         section.home
+          .home__container
             .header
               .logo 
-                a.logo(href="/") AA
+                a.logo__link(href="/") AA
               nav.nav
                 ul.nav__list
                   li.nav__item 
@@ -41,12 +42,12 @@ html(lang="ru")
                       +icon('github', 'socials__icon')
             .name
               p.name__description Личный сайт веб разработчика
-              h1.name__text Аршалуйс Асланян
+              h2.name__text Аршалуйс Асланян
             .scroll
               span.scroll__text Скролл
               a.scroll__link(href="#about")
                 +icon('scroll', 'scroll__icon')
-            .about#about
+          .about#about
               .about__left
                 .about__pic
                   +image('content/Ashot.jpg', 'about__image')
@@ -64,17 +65,17 @@ html(lang="ru")
                 h1.about__header Аршалуйс Асланян
                 p.about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 p.about__text.about__text-margin Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section.skills#skills
-          h1.skills__header Чем я могу быть полезен Вам
+        section.skills
+          h2.skills__header#skills Чем я могу быть полезен Вам
           p.skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
           .skills__details
             .frontend
-              h2.frontend__header Front-end
+              h2.skill__group Front-end
                 - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
               ul.frontend__list
                 each skill in skills
                   li.frontend__list_item
-                    .title #{skill.title}
+                    .skill__title #{skill.title}
                     svg(width="140"  height="140").circle
                       circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
                       circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
@@ -83,12 +84,12 @@ html(lang="ru")
                           stop(offset="0%" stop-color="#dc9322")
                           stop(offset="100%" stop-color="#d6831f")
             .workflow
-              h2.workflow__header Workflow
+              h2.skill__group Workflow
                 - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
               ul.frontend__list
                 each skill in skills
                   li.frontend__list_item
-                    .title #{skill.title}
+                    .skill__title #{skill.title}
                     svg(width="140"  height="140").circle
                       circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
                       circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
@@ -98,14 +99,10 @@ html(lang="ru")
                           stop(offset="0%" stop-color="#dc9322")
                           stop(offset="100%" stop-color="#d6831f")
         section#portfolio
-          h1.portfolio__header Мои работы
+          h2.portfolio__header Мои работы
           .portfolio__details
             .portfolio__images
               +image('content/1.jpg', 'portfolio__image')
-              +image('content/2.jpg', 'portfolio__image')
-              +image('content/3.jpg', 'portfolio__image')
-              +image('content/4.jpg', 'portfolio__image')
-              +image('content/5.jpg', 'portfolio__image')
               .portfolio__images-thumb
                 .thumb__container
                   +image('content/1.jpg', 'portfolio__image thumb portfolio__image--active')
@@ -125,13 +122,13 @@ html(lang="ru")
               span.tags HTML
               span.tags CSS
               span.tags JavaScript
-              h2 Сайт школы образования
-              p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              h3 Сайт школы образования
+              p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4.5 месяца только самых тяжелых испытаний и бессонных ночей!
               .site
                 +icon('link', 'site-icon')
                 a.site-link(href="#" target="__blank") Посмотреть сайт
         section.review
-          h1.review__heaeder#reviews Что обо мне говорят
+          h2.review__heaeder#reviews Что обо мне говорят
           .reviews
             ul.reviews__list
               li.reviews__item
@@ -142,8 +139,8 @@ html(lang="ru")
                   .reviews__person-image
                     +image('content/Dima.jpg', 'reviews__person-pic')
                   .reviews__person-text
-                    p.reviews__person-name Дмитрий Ковальчук
-                    p.reviews__person-pos Основатель Loftschool
+                    h4.reviews__person-name Дмитрий Ковальчук
+                    h4.reviews__person-pos Основатель Loftschool
               li.reviews__item
                 .reviews-block
                   +icon('quote', 'quote')
@@ -152,11 +149,11 @@ html(lang="ru")
                   .reviews__person-image
                     +image('content/Vladimir.jpg', 'reviews__person-pic')
                   .reviews__person-text
-                    p.reviews__person-name Владимир Сабанцев
-                    p.reviews__person-pos Преподаваталь
-          h1.review__heaeder#contacts Связатся со мной
+                    h4.reviews__person-name Владимир Сабанцев
+                    h4.reviews__person-pos Преподаваталь
+          h2.review__heaeder#contacts Связатся со мной
           .form
-            form#form(action="#")
+            form#form.form__inputs(action="#")
               .form__row.inputs
                 label.form__label Введите Ваше имя
                   input.input__name(type="text" placeholder="Аршалуйс Асланян")
@@ -170,3 +167,43 @@ html(lang="ru")
                   +icon('message', 'input__icon')
               .form__row.form__btn
                 button(type="submit").btn Отправить
+        footer.footer
+          .footer__container
+            .footer__left
+              .footer__copy &copy 2020
+              .footer__name 
+                h3.footer__head Аршалуйс Асланян
+                h4.footer__desc Личный сайт веб разработчика
+            .footer__right
+              .footer__nav
+                nav.nav
+                ul.nav__list
+                  li.nav__item 
+                    a.nav__link(href="/") Главная
+                  li.nav__item 
+                    a.nav__link(href="#about") Обо мне
+                  li.nav__item
+                    a.nav__link(href="#skills") Навыки
+                  li.nav__item
+                    a.nav__link(href="#portfolio") Работы
+                  li.nav__item
+                    a.nav__link(href="#reviews") Отзывы
+                  li.nav__item
+                    a.nav__link(href="#contacts") Связатся
+              .footer__texts
+                .footer__text
+                  p.footer__paragraph Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                  .socials
+                  ul.socials__list
+                    li.socials__items.socials__items--footer
+                      a.socials__link(href="https://www.facebook.com/ashot1980" target="_blank")
+                        +icon('fb', 'socials__icon')
+                    li.socials__items.socials__items--footer
+                      a.socials__link(href="https://www.linkedin.com/in/arshaluys/" target="_blank")
+                        +icon('lkdin', 'socials__icon')
+                    li.socials__items.socials__items--footer
+                      a.socials__link(href="https://github.com/arsash" target="_blank")
+                        +icon('github', 'socials__icon')
+                .footer__text
+                  p.footer__paragraph.footer__paragraph--mb Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                  i.footer__text_author Martin Golding
