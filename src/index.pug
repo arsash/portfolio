@@ -42,7 +42,7 @@ html(lang="ru")
                       +icon('github', 'socials__icon')
             .name
               p.name__description Личный сайт веб разработчика
-              h2.name__text Аршалуйс Асланян
+              h1.name__text Аршалуйс Асланян
             .scroll
               span.scroll__text Скролл
               a.scroll__link(href="#about")
@@ -62,15 +62,15 @@ html(lang="ru")
                     li.details__items.details__items-white 8 сентября 1980
               .about__right
                 p.about__text Привет, меня зовут
-                h1.about__header Аршалуйс Асланян
+                h2.about__header Аршалуйс Асланян
                 p.about__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 p.about__text.about__text-margin Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         section.skills
           h2.skills__header#skills Чем я могу быть полезен Вам
           p.skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
           .skills__details
-            .frontend
-              h2.skill__group Front-end
+            .skills__area
+              h3.skill__group Front-end
                 - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
               ul.frontend__list
                 each skill in skills
@@ -83,8 +83,8 @@ html(lang="ru")
                         linearGradient(id='grad')
                           stop(offset="0%" stop-color="#dc9322")
                           stop(offset="100%" stop-color="#d6831f")
-            .workflow
-              h2.skill__group Workflow
+            .skills__area
+              h3.skill__group Workflow
                 - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
               ul.frontend__list
                 each skill in skills
