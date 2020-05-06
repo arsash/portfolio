@@ -99,34 +99,35 @@ html(lang="ru")
                           stop(offset="0%" stop-color="#dc9322")
                           stop(offset="100%" stop-color="#d6831f")
         section#portfolio
-          h2.portfolio__header Мои работы
-          .portfolio__details
-            .portfolio__images
-              +image('content/1.jpg', 'portfolio__image')
-              .portfolio__images-thumb
-                .thumb__container
-                  +image('content/1.jpg', 'portfolio__image thumb portfolio__image--active')
-                  +image('content/2.jpg', 'portfolio__image thumb')
-                  +image('content/3.jpg', 'portfolio__image thumb')
-                  +image('content/4.jpg', 'portfolio__image thumb')
-                  +image('content/5.jpg', 'portfolio__image thumb')
-            .arrows
-              .arrows__cntrls
-                a.arrow__link(href="#")
-                  +icon('arrow-down', 'arrow__icon arrow__icon--activ')
-              .arrows__cntrls
-                a.arrow__link(href="#")
-                  +icon('arrow-down', 'arrow__icon arrow__icon--left')
-            .portfolio__number 1
-            .portfolio__text
-              span.tags HTML
-              span.tags CSS
-              span.tags JavaScript
-              h3 Сайт школы образования
-              p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4.5 месяца только самых тяжелых испытаний и бессонных ночей!
-              .site
-                +icon('link', 'site-icon')
-                a.site-link(href="#" target="__blank") Посмотреть сайт
+          .container
+            h2.portfolio__header Мои работы
+            .portfolio__details
+              .portfolio__images
+                +image('content/1.jpg', 'portfolio__image')
+                .portfolio__images-thumb
+                  .thumb__container
+                    +image('content/1.jpg', 'portfolio__image thumb portfolio__image--active')
+                    +image('content/2.jpg', 'portfolio__image thumb')
+                    +image('content/3.jpg', 'portfolio__image thumb')
+                    +image('content/4.jpg', 'portfolio__image thumb')
+                    +image('content/5.jpg', 'portfolio__image thumb')
+              .arrows
+                .arrows__cntrls
+                  a.arrow__link(href="#")
+                    +icon('arrow-down', 'arrow__icon arrow__icon--activ')
+                .arrows__cntrls
+                  a.arrow__link(href="#")
+                    +icon('arrow-down', 'arrow__icon arrow__icon--left')
+              .portfolio__number 1
+              .portfolio__text
+                span.tags HTML
+                span.tags CSS
+                span.tags JavaScript
+                h3 Сайт школы образования
+                p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4.5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .site
+                  +icon('link', 'site-icon')
+                  a.site-link(href="#" target="__blank") Посмотреть сайт
         section.review
           h2.review__heaeder#reviews Что обо мне говорят
           .reviews

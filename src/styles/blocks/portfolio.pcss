@@ -2,6 +2,10 @@
     color: #000;
     font-weight: bold;
     margin: 50px 100px;
+
+    @include desktop {
+        margin: 50px 0;
+    }
 }
 
 .portfolio__details {
@@ -16,6 +20,10 @@
     overflow: hidden;
     margin-left: 100px;
     position: relative;
+
+    @include desktop {
+        margin-left: 0;
+    }
 }
 
 .portfolio__images-thumb {
@@ -36,7 +44,7 @@
 .portfolio__image {
     width: 100%;
     flex-shrink: 0;
-    transition: .8s;
+    transition: .5s;
 
     &--active {
         border: 3px solid #dc9322;
