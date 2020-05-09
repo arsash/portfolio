@@ -12,6 +12,17 @@ html(lang="ru")
       .maincontent
         section.home
           .home__container
+            //- .paralax
+            //-   .paralax__layer(data-speed="0.1")
+            //-     +image('content/paralax_1.png', 'paralax__image')
+            //-   .paralax__layer(data-speed="0.3")
+            //-     +image('content/paralax_2.png', 'paralax__image')
+            //-   .paralax__layer(data-speed="0.45")
+            //-     +image('content/paralax_3.png', 'paralax__image')
+            //-   .paralax__layer(data-speed="0.6")
+            //-     +image('content/paralax_4.png', 'paralax__image')
+            //-   .paralax__layer(data-speed="0.8")
+            //-     +image('content/paralax_5.png', 'paralax__image')
             .header
               .logo 
                 a.logo__link(href="/") AA
@@ -120,9 +131,10 @@ html(lang="ru")
                     +icon('arrow-down', 'arrow__icon arrow__icon--left')
               .portfolio__number 1
               .portfolio__text
-                span.tags HTML
-                span.tags CSS
-                span.tags JavaScript
+                .tags
+                  span.tags__item HTML
+                  span.tags__item CSS
+                  span.tags__item JavaScript
                 h3 Сайт школы образования
                 p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4.5 месяца только самых тяжелых испытаний и бессонных ночей!
                 .site

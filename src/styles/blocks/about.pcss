@@ -8,6 +8,10 @@
     @include desktop {
         justify-content: space-between;
     }
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .about__pic {
@@ -30,6 +34,10 @@
     @include desktop {
         width: 45%;
     }
+
+    @include phones {
+        width: 90%;
+    }
 }
 
 .about__right {
@@ -38,6 +46,11 @@
 
     @include desktop {
         width: 45%;
+    }
+
+    @include phones {
+        width: 90%;
+        margin-top: 50px;
     }
 }
 
