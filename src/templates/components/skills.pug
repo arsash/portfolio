@@ -1,0 +1,20 @@
+//- script(type="text/x-template")#skills-list
+//-     .skills__details
+//-     .skills__area
+//-     h3.skill__group Front-end
+//-         - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
+//-     ul.frontend__list
+//-         each skill in skills
+//-         li.frontend__list_item
+//-             .skill__title #{skill.title}
+//-             svg(width="140"  height="140").circle
+//-             circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
+//-             circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
+//-             defs
+//-                 linearGradient(id='grad')
+//-                 stop(offset="0%" stop-color="#dc9322")
+//-                 stop(offset="100%" stop-color="#d6831f")
+//-     .skills__area
+//-     h3.skill__group Workflow
+//-         - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
+//-     ul.frontend__list
