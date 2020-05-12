@@ -6,6 +6,10 @@
     width: 60%;
     margin-left: 60px;
     margin-top: 70px;
+
+    @include tablets {
+        width: 85%;
+    }
 }
 
 #form {
@@ -17,14 +21,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include phones {
+        width: 95%;
+        flex-direction: column;
+    }
 }
 
 .form__label {
-    width: 100%;
+    width: 49%;
     color: #656667;
     margin-bottom: 30px;
     font-size: 16px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &--text_area {
+        width: 100%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 input, .textarea {
@@ -33,10 +52,15 @@ input, .textarea {
     border-left: transparent;
     border-right: transparent;
     color: #fff;
-    width: 378px;
+    width: 100%;
     height: 3rem;
     font-size: 18px;
     padding-left: 35px;
+
+    &:focus {
+        background: #1b1f22;
+        color: #ed7f00;
+    }
 }
 
 .input__icon {
@@ -49,10 +73,14 @@ input, .textarea {
 
 .email {
     margin-left: 45px;
+
+    @include phones {
+        margin-left: 0;
+    }
 }
 
 .textarea {
-    width: 800px;
+    width: 100%;
     resize: none;
     margin-top: 15px;
 

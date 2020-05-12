@@ -125,13 +125,13 @@ html(lang="ru")
                     +image('content/3.jpg', 'portfolio__image thumb')
                     +image('content/4.jpg', 'portfolio__image thumb')
                     +image('content/5.jpg', 'portfolio__image thumb')
-              .arrows
-                .arrows__cntrls
-                  a.arrow__link(href="#")
-                    +icon('arrow-down', 'arrow__icon arrow__icon--activ')
-                .arrows__cntrls
-                  a.arrow__link(href="#")
-                    +icon('arrow-down', 'arrow__icon arrow__icon--left')
+                .arrows
+                  .arrows__cntrls
+                    a.arrow__link(href="#")
+                      +icon('arrow-down', 'arrow__icon arrow__icon--activ')
+                  .arrows__cntrls
+                    a.arrow__link(href="#")
+                      +icon('arrow-down', 'arrow__icon arrow__icon--left')
               .portfolio__number 1
               .portfolio__text
                 .tags
@@ -178,7 +178,7 @@ html(lang="ru")
                   input(type="email", name="" placeholder="a.aslanyan@inbox.ru")
                   +icon('envelope', 'input__icon')
               .form__row
-                label.form__label Сообщение к письму
+                label.form__label.form__label--text_area Сообщение к письму
                   textarea(name="", rows="2" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса").textarea
                   +icon('message', 'input__icon')
               .form__row.form__btn
