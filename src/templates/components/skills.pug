@@ -1,7 +1,7 @@
 script(type="text/x-template")#skills-list
     .skills__details
             .skills__area
-              h3.skill__group Front-end
+              h3.skill__group {{ frontEndTitle }}
                 - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
               ul.frontend__list
                 each skill in skills
@@ -15,7 +15,7 @@ script(type="text/x-template")#skills-list
                           stop(offset="0%" stop-color="#dc9322")
                           stop(offset="100%" stop-color="#d6831f")
             .skills__area
-              h3.skill__group Workflow
+              h3.skill__group {{ workflowTitle }}
                 - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
               ul.frontend__list
                 each skill in skills
