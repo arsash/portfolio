@@ -1,4 +1,5 @@
 include ./mixins.pug
+include ./templates/entry.pug
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -82,67 +83,11 @@ html(lang="ru")
           h2.skills__header#skills Чем я могу быть полезен Вам
           p.skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
           #skills-component
-          .skills__details
-            .skills__area
-              h3.skill__group Front-end
-                - var skills = [{title: "HTML5", perc: '10'}, {title: "CSS3", perc: '50'}, {title: "JS", perc: '40'}, {title: "jQuery и Vue.JS", perc: '40'}]
-              ul.frontend__list
-                each skill in skills
-                  li.frontend__list_item
-                    .skill__title #{skill.title}
-                    svg(width="140"  height="140").circle
-                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
-                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
-                      defs
-                        linearGradient(id='grad')
-                          stop(offset="0%" stop-color="#dc9322")
-                          stop(offset="100%" stop-color="#d6831f")
-            .skills__area
-              h3.skill__group Workflow
-                - var skills = [{title: "GIT", perc: '10'}, {title: "Terminal", perc: '50'}, {title: "Gulp", perc: '40'}, {title: "Webpack", perc: '40'}]
-              ul.frontend__list
-                each skill in skills
-                  li.frontend__list_item
-                    .skill__title #{skill.title}
-                    svg(width="140"  height="140").circle
-                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
-                      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=`${skill.perc}%`).circle__icon.circle__icon--above
-                      defs
-                        linearGradient(id='grad')
-                    
-                          stop(offset="0%" stop-color="#dc9322")
-                          stop(offset="100%" stop-color="#d6831f")
         section#portfolio
           .container
             h2.portfolio__header Мои работы
-            .portfolio__details
-              .portfolio__images
-                +image('content/1.jpg', 'portfolio__image')
-                .portfolio__images-thumb
-                  .thumb__container
-                    +image('content/1.jpg', 'portfolio__image thumb portfolio__image--active')
-                    +image('content/2.jpg', 'portfolio__image thumb')
-                    +image('content/3.jpg', 'portfolio__image thumb')
-                    +image('content/4.jpg', 'portfolio__image thumb')
-                    +image('content/5.jpg', 'portfolio__image thumb')
-                .arrows
-                  .arrows__cntrls
-                    a.arrow__link(href="#")
-                      +icon('arrow-down', 'arrow__icon arrow__icon--activ')
-                  .arrows__cntrls
-                    a.arrow__link(href="#")
-                      +icon('arrow-down', 'arrow__icon arrow__icon--left')
-              .portfolio__number 1
-              .portfolio__text
-                .tags
-                  span.tags__item HTML
-                  span.tags__item CSS
-                  span.tags__item JavaScript
-                h3 Сайт школы образования
-                p.portfolio__paragraph Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4.5 месяца только самых тяжелых испытаний и бессонных ночей!
-                .site
-                  +icon('link', 'site-icon')
-                  a.site-link(href="#" target="__blank") Посмотреть сайт
+            #works
+            
         section.review
           h2.review__heaeder#reviews Что обо мне говорят
           .reviews
