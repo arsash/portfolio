@@ -1,27 +1,27 @@
 <template lang="pug">
     .about-group
         .about-group__header
-            input(type="text" placeholder="Workflow" disabled).header__input
+            input(type="text" placeholder="Frontend" disabled).header__input
             div
                 button(type="button").btn-header.btn-done
                 button(type="button").btn-header.btn-del
         .about-group__header
-            input(type="text" placeholder="Git" disabled).header__input.skill__input
+            input(type="text" placeholder="HTML5" disabled).header__input.skill__input
             div
                 button(type="button").btn-header.pencil
                 button(type="button").btn-header.trash
         .about-group__header
-            input(type="text" placeholder="Terminal" disabled).header__input.skill__input
+            input(type="text" placeholder="CSS3" disabled).header__input.skill__input
             div
                 button(type="button").btn-header.pencil
                 button(type="button").btn-header.trash
         .about-group__header
-            input(type="text" placeholder="Gulp" disabled).header__input.skill__input
+            input(type="text" placeholder="Javascript" disabled).header__input.skill__input
             div
                 button(type="button").btn-header.pencil
                 button(type="button").btn-header.trash
         .about-group__header
-            input(type="text" placeholder="Webpack" disabled).header__input.skill__input
+            input(type="text" placeholder="Jquery и Vue" disabled).header__input.skill__input
             div
                 button(type="button").btn-header.pencil
                 button(type="button").btn-header.trash
@@ -33,7 +33,7 @@
 
 <script>
     export default {
-        name: 'workflow'
+        name: 'frontend'
     }
 </script>
 

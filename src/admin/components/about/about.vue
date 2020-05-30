@@ -7,16 +7,19 @@
                 p.btn__title Добавить группу
             .groups
                 newGroup
-                workflow            
+                workflow
+            .groups
+                frontend          
 </template>
 
 <script>
 import newGroup from './newGroup'
 import workflow from './workflow'
+import frontend from './frontend'
     export default {
         name: 'about',
         components: {
-            newGroup, workflow
+            newGroup, workflow, frontend
         }
     }
 </script>
@@ -48,8 +51,12 @@ import workflow from './workflow'
 }
 
 .groups {
+    width: 85%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .add-group {
@@ -69,5 +76,9 @@ import workflow from './workflow'
     color: #333fd2;
     font-weight: bold;
     margin-left: 20px;
+}
+
+.frontend {
+    align-self: flex-start;
 }
 </style>
