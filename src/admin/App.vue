@@ -2,18 +2,22 @@
   div
     root-header
     nav-bar
-    about-block
+    //- router-view
+    //- about-block
+    works
 </template>
 
 <script>
 import aboutBlock from './components/about/about'
 import rootHeader from './components/header'
 import navBar from './components/nav'
+import works from './components/works/works'
+
 
 export default {
   components: {
-    aboutBlock, rootHeader, navBar
-  },
+    aboutBlock, rootHeader, navBar, works
+  }
 }
 </script>
 

@@ -3,10 +3,25 @@
         .content
             ul.navBar
                 li.navBar__item.active
-                    a(href="#").navBar__link Обо мне
+                    //- router-link(
+                    //-     tag: 'a',
+                    //-     :to="`/about`",
+                    //-     class="navBar__link"
+                    //- ) Обо мне
+                    a(href="/about").navBar__link Обо мне
                 li.navBar__item
-                    a(href="#").navBar__link Работы
+                    //- router-link(
+                    //-     tag: 'a',
+                    //-     :to="`/works`",
+                    //-     class="navBar__link"
+                    //- ) Работы
+                    a(href="/works").navBar__link Работы
                 li.navBar__item
+                    //- router-link(
+                    //-     tag: 'a',
+                    //-     :to="`/reviews`",
+                    //-     class="navBar__link"
+                    //- ) Отзывы
                     a(href="#").navBar__link Отзывы
 </template>
 
