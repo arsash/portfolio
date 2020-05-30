@@ -7,3 +7,4 @@ import "./scripts/skills";
 import "./scripts/works";
 import "./scripts/scene";
 import "./scripts/hamburger";
+import "./scripts/reviews";

@@ -5,7 +5,9 @@
                 h2.title Блок "Работы"
         .works
             h2.works__title Редактирование работы
-
+            .works__adding
+                .works__adding-left
+                .works__adding-right
 </template>
 
 <script>
