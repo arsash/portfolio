@@ -2,9 +2,9 @@
   div
     root-header
     nav-bar
-    //- router-view
+    router-view
     //- about-block
-    works
+    //- works
 </template>
 
 <script>
