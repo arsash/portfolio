@@ -7,8 +7,20 @@ import about from './components/about/about';
 import works from './components/works/works';
 
 const routes = [
-    { path: '/about', component: about },
-    { path: '/works', component: works }
+    { 
+        path: '/',
+        component: about
+    },
+    {
+        path: '/about',
+        component: about
+    },
+    {
+        path: '/works',
+        component: works
+    }
 ]
 
-export default new VueRouter({routes});
+export default new VueRouter({
+    routes
+});

@@ -2,7 +2,8 @@
     .container
         .content
             .left
-                img(src="../../images/content/Ashot.jpg", alt="alt").avatar
+                a(href="admin#/")
+                    img(src="../../images/content/Ashot.jpg", alt="alt").avatar
                 h2.name Аршалуйс Асланян
                 .panel Панель администрирования
             .right

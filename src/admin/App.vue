@@ -3,8 +3,6 @@
     root-header
     nav-bar
     router-view
-    //- about-block
-    //- works
 </template>
 
 <script>

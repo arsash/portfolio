@@ -2,27 +2,24 @@
    .container
         .content
             ul.navBar
-                li.navBar__item.active
+                li.navBar__item
                     router-link(
                         tag: 'a',
                         :to="`/about`",
                         class="navBar__link"
                     ) Обо мне
-                    //- a(href="/about").navBar__link Обо мне
                 li.navBar__item
                     router-link(
                         tag: 'a',
                         :to="`/works`",
                         class="navBar__link"
                     ) Работы
-                    //- a(href="/works").navBar__link Работы
                 li.navBar__item
                     router-link(
                         tag: 'a',
                         :to="`/reviews`",
                         class="navBar__link"
                     ) Отзывы
-                    //- a(href="#").navBar__link Отзывы
 </template>
 
 <script>
@@ -53,19 +50,20 @@
 
 .navBar__item {
     border-bottom: 3px solid transparent;
-    padding: 30px;
-
-    &:hover {
-        border-bottom: 3px solid #383bcf;
-    }
+    padding: 30px 0;
 }
 
-.active {
+.router-link-active {
     border-bottom: 3px solid #383bcf;
 }
 
 .navBar__link {
     text-decoration: none;
     color: #414c63;
+    padding: 30px;
+
+    &:hover {
+        border-bottom: 3px solid #383bcf;
+    }
 }
 </style>
