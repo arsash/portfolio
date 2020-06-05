@@ -3,26 +3,27 @@
         .content
             .header
                 h2.title Блок "Отзывы"
-        .works
-            h2.works__title Новый отзыв
-            .works__adding
-                .works__adding-left
-                    workupload
-                .works__adding-right
-                    workform
-        .all_works
-            worksall
-                            
+        .review
+            h2.review__title Новый отзыв
+            .review__adding
+                .review__adding-left
+                    .avatar
+                        img(src="../../img/man-user.png", alt="alt")
+                    reviewupload
+                .review__adding-right
+                    reviewform
+        .all_review
+            reviewsall           
 </template>
 
 <script>
-import workupload from './workupload';
-import workform from './workform';
-import worksall from './worksall';
+import reviewupload from './reviewupload';
+import reviewform from './reviewform';
+import reviewsall from './reviewsall';
     export default {
         name: 'works',
         components: {
-            workform, workupload, worksall
+            reviewform, reviewupload, reviewsall
         }
     }
 </script>
@@ -40,7 +41,7 @@ import worksall from './worksall';
     padding-top: 70px;
 }
 
-.works {
+.review {
     width: 90%;
     margin: 0 auto;
     background: #fff;
@@ -60,13 +61,13 @@ import worksall from './worksall';
     margin-right: 100px;
 }
 
-.works__title {
+.review__title {
     border-bottom: 1px solid #dedee0;
     padding-bottom: 20px;
     color: #414c63;
 }
 
-.works__adding {
+.review__adding {
     width: 95%;
     margin: 0 auto;
     display: flex;
@@ -74,7 +75,24 @@ import worksall from './worksall';
     justify-content: space-between;
 }
 
-.works__adding-left, .works__adding-right {
-    width: 45%;
+.review__adding-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.review__adding-right {
+    width: 70%;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    background: #dee4ed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

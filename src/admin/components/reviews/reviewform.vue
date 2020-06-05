@@ -1,17 +1,18 @@
 <template lang="pug">
     .form
         form(action="#")
-            label.form_label Название
-                input(type="text").form_input
-            label.form_label Ссылка
-                input(type="text").form_input
-            label.form_label Описание
-                textarea(resize="none").form_input
-            label.form_label Добавление тега
-                input(type="text").form_input
-            .form_buttons
-                button(type="reset").reset_btn Отмена
-                button(type='submit').save_btn Сохранить
+            .form__row
+                label.form_label Имя автора
+                    input(type="text").form_input
+                label.form_label Титул автора
+                    input(type="text").form_input
+            .form__row
+                label.form_textarea Отзыв
+                    textarea(resize="none").form_input
+            .form__row
+                .form_buttons
+                    button(type="reset").reset_btn Отмена
+                    button(type='submit').save_btn Сохранить
 </template>
 
 <script>
@@ -21,7 +22,21 @@
 </script>
 
 <style lang="postcss" scoped>
+.form__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .form_label {
+    color: #9aa2af;
+    width: 45%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.form_textarea {
+    width: 100%;
     color: #9aa2af;
 }
 
@@ -36,6 +51,7 @@
 
 textarea {
     resize: none;
+    width: 100%;
 }
 
 .form_buttons {

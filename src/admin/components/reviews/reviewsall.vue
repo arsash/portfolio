@@ -1,21 +1,21 @@
 <template lang="pug">
     .container
-        .work_item.work_adding
+        .review_item.review_adding
             button.add_btn(type='button') +
-            .add_text Добавить работу
-        workitem
-        workitem
-        workitem
-        workitem
-        workitem
+            .add_text Добавить отзыв
+        reviewitem
+        reviewitem
+        reviewitem
+        reviewitem
+        reviewitem
 </template>
 
 <script>
-import workitem from './workitem';
+import reviewitem from './reviewitem';
     export default {
         name: 'worksall',
         components: {
-            workitem
+            reviewitem
         }
     }
 </script>
@@ -33,9 +33,9 @@ a {
     color: #383bcf;
 }
 
-.work_item {
+.review_item {
     width: 30%;
-    height: 540px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,9 +43,9 @@ a {
     margin-top: 70px;
 }
 
-.work_adding {
+.review_adding {
     background: #1a54df;
-    padding: 160px 0;
+    padding: 80px 0;
 }
 
 .add_btn {
