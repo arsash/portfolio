@@ -1,4 +1,10 @@
+import Vue from 'vue';
 import Flickity from 'vue-flickity';
+
+new Vue ({
+  el: '#reviews__block',
+  template: '#review__block'
+})
 
 new Vue({
   components: {

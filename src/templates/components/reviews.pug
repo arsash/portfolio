@@ -1,0 +1,51 @@
+script(type='text/x-template')#review__block
+    div.rev_container
+        h2.review__heaeder#reviews Что обо мне говорят
+            button(@click="previous()").rev-btn <
+            button(@click="next()").rev-btn >
+        .reviews
+            .reviews__list
+                flickity(ref="flickity" :options="flickityOptions")
+                    .flickity__container
+                        .carousel-cell
+                            .reviews__item
+                                .reviews-block
+                                    +icon('quote', 'quote')
+                                    p.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                                .reviews__person
+                                    .reviews__person-image
+                                        +image('content/Dima.jpg', 'reviews__person-pic')
+                                    .reviews__person-text
+                                        h4.reviews__person-name Дмитрий Ковальчук
+                                        h4.reviews__person-pos Основатель Loftschool
+                            .reviews__item
+                                .reviews-block
+                                    +icon('quote', 'quote')
+                                    p.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                                .reviews__person
+                                    .reviews__person-image
+                                        +image('content/Vladimir.jpg', 'reviews__person-pic')
+                                    .reviews__person-text
+                                        h4.reviews__person-name Владимир Сабанцев
+                                        h4.reviews__person-pos Преподаваталь
+                        .carousel-cell
+                            .reviews__item
+                                .reviews-block
+                                    +icon('quote', 'quote')
+                                    p.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                                .reviews__person
+                                    .reviews__person-image
+                                        +image('content/Dima.jpg', 'reviews__person-pic')
+                                    .reviews__person-text
+                                        h4.reviews__person-name Дмитрий Ковальчук
+                                        h4.reviews__person-pos Основатель Loftschool
+                            .reviews__item
+                                .reviews-block
+                                    +icon('quote', 'quote')
+                                    p.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                                .reviews__person
+                                    .reviews__person-image
+                                        +image('content/Vladimir.jpg', 'reviews__person-pic')
+                                    .reviews__person-text
+                                        h4.reviews__person-name Владимир Сабанцев
+                                        h4.reviews__person-pos Преподаваталь
