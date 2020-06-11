@@ -1,8 +1,8 @@
 script(type='text/x-template')#review__block
     div.rev_container
         h2.review__heaeder#reviews Что обо мне говорят
-            button().rev-btn <
-            button().rev-btn >
+            button(@click="prev").rev-btn <
+            button(@click="next").rev-btn >
         .reviews
             .reviews__list
                 .reviews__item
@@ -28,20 +28,10 @@ script(type='text/x-template')#review__block
                 .reviews__item
                     .reviews-block
                         +icon('quote', 'quote')
-                        p.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                        p.reviews__text Аршалуйс проходил обучение профессии "веб-разработчик". Он благополучно освоил технологии, (HTML,CSS, JS, Jquery, Gulp, Webpack Sass, Pug , Vue.js).
                     .reviews__person
                         .reviews__person-image
-                            +image('content/Dima.jpg', 'reviews__person-pic')
+                            +image('content/Anna.jpg', 'reviews__person-pic')
                         .reviews__person-text
                             h4.reviews__person-name Анна Сысоева
                             h4.reviews__person-pos Наставник
-                .reviews__item
-                    .reviews-block
-                        +icon('quote', 'quote')
-                        p.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                    .reviews__person
-                        .reviews__person-image
-                            +image('content/Vladimir.jpg', 'reviews__person-pic')
-                        .reviews__person-text
-                            h4.reviews__person-name Елена Кулешова
-                            h4.reviews__person-pos Куратор курса

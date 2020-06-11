@@ -1,36 +1,19 @@
 import Vue from 'vue';
-import Flickity from 'vue-flickity';
+
 
 new Vue ({
   el: '#reviews__block',
-  template: '#review__block'
-})
-
-new Vue({
-  components: {
-    Flickity
-  },
-  
-  data() {
-    return {
-      flickityOptions: {
-        initialIndex: 3,
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true
-        
-        // any options from Flickity can be used
-      }
-    }
-  },
-  
+  template: '#review__block',
   methods: {
     next() {
-      this.$refs.flickity.next();
+      let reviewList = document.querySelector('.reviews__list');
+      reviewList.style.marginLeft = -450 + 'px';
+      reviewList.style.transition = 1 + 's';
     },
-    
-    previous() {
-      this.$refs.flickity.previous();
+    prev() {
+      let reviewList = document.querySelector('.reviews__list');
+      reviewList.style.marginLeft = 50 + 'px';
+      reviewList.style.transition = 1 + 's';
     }
   }
 });
