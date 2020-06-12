@@ -1,18 +1,18 @@
 script(type="text/x-template")#skills-list
     ul.skills__details
-      li.skill__group(v-for="group in skills.category")
-        #skill-category-component
+      li.skill__group(v-for="group in skills")
+        category(:group="group")
 
 script(type="text/x-template")#skill-category
   .skills__area 
     h3.skill__group {{ group.category }}    
     ul.frontend__list
-      li.frontend__list_item
-        #skill-component
+      li.frontend__list_item(v-for="skill in group.skills")
+        skill(:skill="skill")
 
 script(type="text/x-template")#skill
   .skill__item
-    .skill__title {{skill.title}}
+    .skill__title {{ skill.title }}
     svg(width="140"  height="140").circle
       circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
       circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset="skill.perc").circle__icon.circle__icon--above
