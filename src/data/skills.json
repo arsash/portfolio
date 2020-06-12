@@ -1,0 +1,38 @@
+[
+    {
+        "title" : "HTML5",
+        "perc" : "5" 
+    },
+    {
+        "title" : "CSS3",
+        "perc" : "20"
+    },
+    {
+        "title" : "JS",
+        "perc" : "40"
+    },
+    {
+        "title" : "jQuery и Vue.JS",
+        "perc" : "40"
+    },
+    {
+        "title" : "GIT",
+        "perc" : "10" 
+    },
+    {
+        "title" : "Terminal",
+        "perc" : "25"
+    },
+    {
+        "title" : "Gulp",
+        "perc" : "40"
+    },
+    {
+        "title" : "Webpack",
+        "perc" : "40"
+    },
+    {
+        "frontend" : "Frontend",
+        "workflow" : "Workflow"
+    }
+]

@@ -1,12 +1,5 @@
 import Vue from 'vue';
-
-// const skillItemFrontend = {
-//     template: '#skill__item-frontend'
-// }
-
-// const skillItemWorkflow = {
-//     template: '#skill__item-workflow'
-// }
+import { data } from 'autoprefixer';
 
 
 new Vue({
@@ -14,8 +7,21 @@ new Vue({
     template: '#skills-list',
     data(){
         return {
-            frontEndTitle: 'Front-end',
-            workflowTitle: 'Workflow'
+            skills: []
         }
+    },
+    created () {
+        const skillsData = require('../data/skills');
+        this.skills = skillsData;
     }
 });
+
+new Vue({
+    el: '#skill-category-component',
+    template: '#skill-category'
+})
+
+new Vue({
+    el: '#skill-component',
+    template: '#skill'
+})
