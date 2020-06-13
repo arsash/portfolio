@@ -15,7 +15,7 @@ script(type="text/x-template")#skill
     .skill__title {{ skill.title }}
     svg(width="140"  height="140").circle
       circle(cx='50' cy='50' r='45' fill="transparent" stroke="#413f40").circle__icon.circle__icon--under
-      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset="skill.perc").circle__icon.circle__icon--above
+      circle(cx='50' cy='50' r='45' fill="transparent" stroke="url(#grad)" stroke-dashoffset=``).circle__icon.circle__icon--above
       defs
         linearGradient(id='grad')
           stop(offset="0%" stop-color="#dc9322")

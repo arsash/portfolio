@@ -32,5 +32,6 @@ new Vue({
     created () {
         const skillsData = require('../data/skills');
         this.skills = skillsData;
+        console.log(skills)
     }
 });
